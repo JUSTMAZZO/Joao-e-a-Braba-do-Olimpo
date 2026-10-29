@@ -1,0 +1,32 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Godot Engine
+.godot/
+*.translation
+
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+*.csproj
+*.unityproj
+*.sln
+
+# Blender
+*.blend1
+*.blend2
+*.autosave
+
+# Ambientes Locais
+.env
+.env.local
+*.private
