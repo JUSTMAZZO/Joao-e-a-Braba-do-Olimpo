@@ -33,8 +33,9 @@ extends CharacterBody3D
 @export var animation_player: AnimationPlayer
 
 @export_group("Animação")
-@export var idle_animation := &"idle"
-@export var run_animation := &"run"
+## Nomes das animações no joao.glb (a busca ignora maiúsculas/minúsculas).
+@export var idle_animation := &"Idle"
+@export var run_animation := &"Run"
 ## Osso que carrega o deslocamento (root motion) nas animações do Mixamo.
 @export var root_bone := &"Hips"
 ## Velocidade horizontal (m/s) a partir da qual o João passa de idle para corrida.
@@ -149,8 +150,12 @@ func _rotate_visual(delta: float) -> void:
 func _setup_animations() -> void:
 	if not animation_player and visual:
 		animation_player = visual.find_child("AnimationPlayer", true, false)
+	if visual and visual.find_children("*", "MeshInstance3D", true, false).is_empty():
+		push_warning("O modelo em %s não tem MeshInstance3D — o João ficará invisível. Reexporte o .glb incluindo a malha." % visual.get_path())
 	if not animation_player:
 		return
+	idle_animation = _resolve_animation(idle_animation)
+	run_animation = _resolve_animation(run_animation)
 	for anim_name in [idle_animation, run_animation]:
 		if not animation_player.has_animation(anim_name):
 			push_warning("Animação '%s' não encontrada em %s" % [anim_name, animation_player.get_path()])
@@ -161,6 +166,17 @@ func _setup_animations() -> void:
 		if anim_name == run_animation:
 			_run_anim_speed = travelled / anim.length
 	animation_player.play(idle_animation)
+
+
+## Devolve o nome real da animação, ignorando maiúsculas/minúsculas
+## ("idle" encontra "Idle"), para tolerar reexportações do Blender.
+func _resolve_animation(wanted: StringName) -> StringName:
+	if animation_player.has_animation(wanted):
+		return wanted
+	for anim_name in animation_player.get_animation_list():
+		if String(anim_name).get_file().nocasecmp_to(wanted) == 0:
+			return anim_name
+	return wanted
 
 
 ## Remove o deslocamento horizontal do osso raiz (o CharacterBody3D é quem move
