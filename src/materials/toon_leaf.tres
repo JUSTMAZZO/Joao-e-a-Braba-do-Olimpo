@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Material" path="res://src/materials/toon_leaf_outline.tres" id="1_0hxyv"]
+[ext_resource type="Shader" path="res://src/shaders/toon_leaf.gdshader" id="2_rkgok"]
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_0hxyv")
+shader = ExtResource("2_rkgok")
+shader_parameter/albedo = Color(0.13, 0.78, 0.42, 1)
+shader_parameter/specular_strength = 0.6

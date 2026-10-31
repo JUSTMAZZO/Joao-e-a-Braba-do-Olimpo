@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Material" path="res://src/materials/toon_trunk_outline.tres" id="1_0nik1"]
+[ext_resource type="Shader" path="res://src/shaders/toon_leaf.gdshader" id="2_3vi8r"]
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_0nik1")
+shader = ExtResource("2_3vi8r")
+shader_parameter/albedo = Color(0.38, 0.34, 0.2, 1)
+shader_parameter/bands = 2
+shader_parameter/light_wrap = 0.4

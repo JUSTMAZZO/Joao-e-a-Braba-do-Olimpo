@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://src/shaders/toon_outline.gdshader" id="1_oy44q"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_oy44q")
+shader_parameter/outline_color = Color(0.09, 0.07, 0.04, 1)
+shader_parameter/outline_width = 0.05
+shader_parameter/extrude_by_position = false
