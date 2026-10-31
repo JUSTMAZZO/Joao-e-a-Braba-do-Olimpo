@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://src/scripts/fog_zone.gd" id="3_o81g6"]
 [ext_resource type="PackedScene" path="res://assets/models/joao.glb" id="4_2lg1k"]
 [ext_resource type="Shader" path="res://src/shaders/spore.gdshader" id="6_5lsyw"]
+[ext_resource type="Material" path="res://src/materials/toon_joao.tres" id="7_joaot"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbro3"]
 sky_top_color = Color(0.36, 0.55, 0.85, 1)
@@ -401,6 +402,9 @@ shape = SubResource("CapsuleShape3D_qx2bx")
 
 [node name="Joao" type="Node3D" parent="Player/Visual" unique_id=1147842445 instance=ExtResource("4_2lg1k")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="model" parent="Player/Visual/Joao/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("7_joaot")
 
 [node name="OrbitalCamera" type="Node3D" parent="." unique_id=47921840 node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 9)
