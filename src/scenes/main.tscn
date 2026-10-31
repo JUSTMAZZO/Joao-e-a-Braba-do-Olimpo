@@ -1,0 +1,490 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/scripts/player.gd" id="1_32aa5"]
+[ext_resource type="Script" path="res://src/scripts/orbital_camera.gd" id="2_5dlwx"]
+[ext_resource type="Script" path="res://src/scripts/fog_zone.gd" id="3_o81g6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbro3"]
+sky_top_color = Color(0.36, 0.55, 0.85, 1)
+sky_horizon_color = Color(0.98, 0.84, 0.6, 1)
+ground_bottom_color = Color(0.3, 0.25, 0.4, 1)
+ground_horizon_color = Color(0.75, 0.65, 0.8, 1)
+
+[sub_resource type="Sky" id="Sky_2lg1k"]
+sky_material = SubResource("ProceduralSkyMaterial_dbro3")
+
+[sub_resource type="Environment" id="Environment_5lsyw"]
+background_mode = 2
+sky = SubResource("Sky_2lg1k")
+ambient_light_source = 2
+ambient_light_color = Color(0.62, 0.52, 0.85, 1)
+ambient_light_energy = 0.6
+tonemap_mode = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kokaf"]
+albedo_color = Color(0.42, 0.5, 0.28, 1)
+roughness = 0.9
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lp058"]
+size = Vector2(40, 40)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_24j03"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1ia5"]
+albedo_color = Color(0.2, 0.38, 0.16, 1)
+roughness = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kbdt0"]
+top_radius = 2.4
+bottom_radius = 3.0
+height = 40.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4rjby"]
+height = 40.0
+radius = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccybt"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_50ugh"]
+size = Vector3(3.2, 0.3, 2.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lcp4o"]
+size = Vector3(3.2, 0.3, 2.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yk6rd"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htxff"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v252j"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsm7c"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n75dp"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j04uq"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyryd"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tx8mq"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxm0n"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2sd1y"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am227"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7opv2"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h8ax2"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0lsc"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n157j"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jirt8"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dso5o"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjsjt"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e38yt"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7vtn"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fg2at"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5gsx"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjnpb"]
+albedo_color = Color(0.35, 0.78, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qx2bx"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2s0q"]
+albedo_color = Color(0.95, 0.55, 0.2, 1)
+roughness = 0.9
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bexsm"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no6qo"]
+albedo_color = Color(0.3, 0.2, 0.15, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_1lamk"]
+size = Vector3(0.2, 0.2, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_56s82"]
+size = Vector3(16, 8, 16)
+
+[sub_resource type="FogMaterial" id="FogMaterial_j53iq"]
+density = 0.15
+albedo = Color(0.8, 0.7, 0.95, 1)
+emission = Color(0.12, 0.25, 0.1, 1)
+
+[node name="Main" type="Node3D" unique_id=1844405344]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1827848844]
+environment = SubResource("Environment_5lsyw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=75252050]
+transform = Transform3D(0.8660254, -0.43301272, 0.24999999, 0, 0.49999997, 0.86602545, -0.5, -0.75, 0.43301266, 0, 0, 0)
+light_color = Color(1, 0.9, 0.7, 1)
+light_energy = 1.2
+shadow_enabled = true
+directional_shadow_max_distance = 80.0
+
+[node name="Greybox" type="Node3D" parent="." unique_id=89379410]
+
+[node name="Ground" type="StaticBody3D" parent="Greybox" unique_id=1511892254]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Ground" unique_id=612662319]
+material_override = SubResource("StandardMaterial3D_kokaf")
+mesh = SubResource("PlaneMesh_lp058")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Ground" unique_id=923854192]
+shape = SubResource("WorldBoundaryShape3D_24j03")
+
+[node name="Trunk" type="StaticBody3D" parent="Greybox" unique_id=746221547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Trunk" unique_id=187490909]
+material_override = SubResource("StandardMaterial3D_p1ia5")
+mesh = SubResource("CylinderMesh_kbdt0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Trunk" unique_id=273939726]
+shape = SubResource("CylinderShape3D_4rjby")
+
+[node name="Leaf_01" type="StaticBody3D" parent="Greybox" unique_id=1591949833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4.6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_01" unique_id=923137847]
+material_override = SubResource("StandardMaterial3D_ccybt")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_01" unique_id=2014753666]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_02" type="StaticBody3D" parent="Greybox" unique_id=377980462]
+transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, 2.6384516, 3, 3.7680993)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_02" unique_id=248161242]
+material_override = SubResource("StandardMaterial3D_yk6rd")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_02" unique_id=1461027606]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_03" type="StaticBody3D" parent="Greybox" unique_id=1010122407]
+transform = Transform3D(0.34202015, 0, 0.9396926, 0, 1, 0, -0.9396926, 0, 0.34202015, 4.322586, 4.5, 1.5732926)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_03" unique_id=806128398]
+material_override = SubResource("StandardMaterial3D_htxff")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_03" unique_id=1658601209]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_04" type="StaticBody3D" parent="Greybox" unique_id=1588741269]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 4.443259, 6, -1.1905676)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_04" unique_id=487596255]
+material_override = SubResource("StandardMaterial3D_v252j")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_04" unique_id=105534406]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_05" type="StaticBody3D" parent="Greybox" unique_id=1310946169]
+transform = Transform3D(-0.76604444, 0, 0.64278764, 0, 1, 0, -0.64278764, 0, -0.76604444, 2.956823, 7.5, -3.5238044)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_05" unique_id=618173381]
+material_override = SubResource("StandardMaterial3D_qsm7c")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_05" unique_id=83698240]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_06" type="StaticBody3D" parent="Greybox" unique_id=726226262]
+transform = Transform3D(-0.9961947, 0, 0.08715564, 0, 1, 0, -0.08715564, 0, -0.9961947, 0.40091643, 9, -4.5824957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_06" unique_id=791348387]
+material_override = SubResource("StandardMaterial3D_n75dp")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_06" unique_id=1291446585]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_07" type="StaticBody3D" parent="Greybox" unique_id=1298655377]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -2.3, 10.5, -3.983717)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_07" unique_id=1428877420]
+material_override = SubResource("StandardMaterial3D_j04uq")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_07" unique_id=35365595]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_08" type="StaticBody3D" parent="Greybox" unique_id=980488340]
+transform = Transform3D(-0.42261818, 0, -0.9063078, 0, 1, 0, 0.9063078, 0, -0.42261818, -4.169016, 12, -1.944044)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_08" unique_id=141820344]
+material_override = SubResource("StandardMaterial3D_tyryd")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_08" unique_id=1793678058]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_09" type="StaticBody3D" parent="Greybox" unique_id=787773798]
+transform = Transform3D(0.17364815, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364815, -4.5301156, 13.5, 0.79878163)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_09" unique_id=1953844332]
+material_override = SubResource("StandardMaterial3D_tx8mq")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_09" unique_id=769856961]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_10" type="StaticBody3D" parent="Greybox" unique_id=1097128155]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -3.2526913, 15, 3.2526913)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_10" unique_id=1168193547]
+material_override = SubResource("StandardMaterial3D_xxm0n")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_10" unique_id=1062321665]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_11" type="StaticBody3D" parent="Greybox" unique_id=2118261085]
+transform = Transform3D(0.9848078, 0, -0.17364797, 0, 1, 0, 0.17364797, 0, 0.9848078, -0.79878163, 16.5, 4.5301156)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_11" unique_id=133492377]
+material_override = SubResource("StandardMaterial3D_2sd1y")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_11" unique_id=577890669]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_12" type="StaticBody3D" parent="Greybox" unique_id=1068892304]
+transform = Transform3D(0.90630776, 0, 0.42261833, 0, 1, 0, -0.42261833, 0, 0.90630776, 1.944044, 18, 4.169016)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_12" unique_id=1446354118]
+material_override = SubResource("StandardMaterial3D_am227")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_12" unique_id=13559984]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_13" type="StaticBody3D" parent="Greybox" unique_id=1413287102]
+transform = Transform3D(0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.50000006, 3.983717, 19.5, 2.3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_13" unique_id=1927607883]
+material_override = SubResource("StandardMaterial3D_7opv2")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_13" unique_id=1329606212]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_14" type="StaticBody3D" parent="Greybox" unique_id=2063988747]
+transform = Transform3D(-0.08715559, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, -0.08715559, 4.5824957, 21, -0.40091643)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_14" unique_id=510043566]
+material_override = SubResource("StandardMaterial3D_h8ax2")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_14" unique_id=1248383261]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_15" type="StaticBody3D" parent="Greybox" unique_id=936167160]
+transform = Transform3D(-0.64278775, 0, 0.7660443, 0, 1, 0, -0.7660443, 0, -0.64278775, 3.5238044, 22.5, -2.956823)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_15" unique_id=856970363]
+material_override = SubResource("StandardMaterial3D_r0lsc")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_15" unique_id=123319200]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_16" type="StaticBody3D" parent="Greybox" unique_id=1835450959]
+transform = Transform3D(-0.9659257, 0, 0.25881943, 0, 1, 0, -0.25881943, 0, -0.9659257, 1.1905676, 24, -4.443259)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_16" unique_id=1201692536]
+material_override = SubResource("StandardMaterial3D_n157j")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_16" unique_id=1435662906]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_17" type="StaticBody3D" parent="Greybox" unique_id=1046939701]
+transform = Transform3D(-0.9396926, 0, -0.3420201, 0, 1, 0, 0.3420201, 0, -0.9396926, -1.5732926, 25.5, -4.322586)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_17" unique_id=1337388235]
+material_override = SubResource("StandardMaterial3D_jirt8")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_17" unique_id=989475620]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_18" type="StaticBody3D" parent="Greybox" unique_id=873122745]
+transform = Transform3D(-0.5735762, 0, -0.81915224, 0, 1, 0, 0.81915224, 0, -0.5735762, -3.7680993, 27, -2.6384516)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_18" unique_id=460462678]
+material_override = SubResource("StandardMaterial3D_dso5o")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_18" unique_id=1102355074]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_19" type="StaticBody3D" parent="Greybox" unique_id=1943257342]
+transform = Transform3D(-2.900667e-07, 0, -1, 0, 1, 0, 1, 0, -2.900667e-07, -4.6, 28.5, -1.9716161e-15)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_19" unique_id=1489544244]
+material_override = SubResource("StandardMaterial3D_gjsjt")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_19" unique_id=817470045]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_20" type="StaticBody3D" parent="Greybox" unique_id=576022213]
+transform = Transform3D(0.5735765, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.5735765, -3.7680993, 30, 2.6384516)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_20" unique_id=1641482872]
+material_override = SubResource("StandardMaterial3D_e38yt")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_20" unique_id=128196652]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_21" type="StaticBody3D" parent="Greybox" unique_id=1061324324]
+transform = Transform3D(0.93969274, 0, -0.34201974, 0, 1, 0, 0.34201974, 0, 0.93969274, -1.5732926, 31.5, 4.322586)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_21" unique_id=77668139]
+material_override = SubResource("StandardMaterial3D_x7vtn")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_21" unique_id=2052987853]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_22" type="StaticBody3D" parent="Greybox" unique_id=1693329870]
+transform = Transform3D(0.9659259, 0, 0.25881886, 0, 1, 0, -0.25881886, 0, 0.9659259, 1.1905676, 33, 4.443259)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_22" unique_id=2056380635]
+material_override = SubResource("StandardMaterial3D_fg2at")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_22" unique_id=1955978779]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_23" type="StaticBody3D" parent="Greybox" unique_id=2006972275]
+transform = Transform3D(0.64278746, 0, 0.76604456, 0, 1, 0, -0.76604456, 0, 0.64278746, 3.5238044, 34.5, 2.956823)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_23" unique_id=274249128]
+material_override = SubResource("StandardMaterial3D_t5gsx")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_23" unique_id=310952030]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Leaf_24" type="StaticBody3D" parent="Greybox" unique_id=1114849951]
+transform = Transform3D(0.08715616, 0, 0.99619466, 0, 1, 0, -0.99619466, 0, 0.08715616, 4.5824957, 36, 0.40091643)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Greybox/Leaf_24" unique_id=1143987056]
+material_override = SubResource("StandardMaterial3D_jjnpb")
+mesh = SubResource("BoxMesh_50ugh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greybox/Leaf_24" unique_id=1028257587]
+shape = SubResource("BoxShape3D_lcp4o")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1762260498 node_paths=PackedStringArray("camera_rig", "visual")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+script = ExtResource("1_32aa5")
+camera_rig = NodePath("../OrbitalCamera")
+visual = NodePath("Visual")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=575536895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_qx2bx")
+
+[node name="Visual" type="Node3D" parent="Player" unique_id=1363428902]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Visual" unique_id=1323750673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_e2s0q")
+mesh = SubResource("CapsuleMesh_bexsm")
+
+[node name="Nose" type="MeshInstance3D" parent="Player/Visual" unique_id=1986135044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, -0.4)
+material_override = SubResource("StandardMaterial3D_no6qo")
+mesh = SubResource("BoxMesh_1lamk")
+
+[node name="OrbitalCamera" type="Node3D" parent="." unique_id=47921840 node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 9)
+script = ExtResource("2_5dlwx")
+target = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="OrbitalCamera" unique_id=810497575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+current = true
+
+[node name="FogZone" type="Area3D" parent="." unique_id=440099457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
+script = ExtResource("3_o81g6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FogZone" unique_id=787633683]
+shape = SubResource("BoxShape3D_56s82")
+
+[node name="FogVolume" type="FogVolume" parent="FogZone" unique_id=2078592989]
+size = Vector3(16, 8, 16)
+material = SubResource("FogMaterial_j53iq")
