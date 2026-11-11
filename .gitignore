@@ -30,3 +30,6 @@ MemoryCaptures/
 .env
 .env.local
 *.private
+
+# Claude Code (worktrees locais)
+.claude/worktrees/

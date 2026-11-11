@@ -19,3 +19,10 @@
 - Engine Alvo: Godot 4 (GDScript)
 - Modelos e Rig: Blender (.glb) + esqueleto compatível com Mixamo / Kimodo (SOMA 30-joints)
 - Commits Git: Seguir o padrão Conventional Commits (feat:, fix:, docs:, chore:).
+
+## 5. Agentes, Checklists e Templates
+- Agentes Godot em `.claude/agents/`: `godot-specialist` (arquitetura, delega), `godot-gdscript-specialist`, `godot-shader-specialist`.
+- Checklists de gênero em `docs/design/checklists/` (plataforma → escalada; tycoon → Modo Cooperativa), com status do que já está implementado.
+- Templates de documento em `docs/templates/` (GDD por sistema, level design, art bible, pilares).
+- Parse check de GDScript: `godot --headless --path . -s res://tools/godot_parse_check.gd -- res://src/scripts/<arquivo>.gd`
+- Origem e licença (MIT): `docs/third-party/claude-code-game-studios-LICENSE.md`.
